@@ -12,7 +12,10 @@ export class DashboardService {
       return this.http.get<Veiculo[]>('https://apidavid-production.up.railway.app/vehicles')
     }
 
-    getVinInfos(vin: string) {
-      return this.http.get<VinInfos>('https://apidavid-production.up.railway.app/vehicleData')
-   }
-  }
+    getVinInfos(vin: string): Observable<VinInfos> {
+  return this.http.post<VinInfos>(
+    'https://apidavid-production.up.railway.app/vehicleData',
+    { vin } // enviando o vin no corpo do post
+  );
+}
+}
