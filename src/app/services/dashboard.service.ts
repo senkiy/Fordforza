@@ -9,10 +9,10 @@ import { Veiculo, VinInfos } from '../models/car';
 export class DashboardService {
     http = inject(HttpClient)
     getVeiculos(): Observable<Veiculo[]> {
-      return this.http.get<Veiculo[]>('https://apidavid-production.up.railway.app/')
+      return this.http.get<Veiculo[]>('https://apidavid-production.up.railway.app/vehicles')
     }
 
     getVinInfos(vin: string) {
-      return this.http.get<VinInfos>('https://apidavid-production.up.railway.app/')
+      return this.http.get<VinInfos>('https://apidavid-production.up.railway.app/vehicleData')
    }
   }
