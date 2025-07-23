@@ -10,7 +10,7 @@ export class LoginService {
 
   http = inject(HttpClient);
   login(nome: string, senha: string): Observable<Usuario> {
-    return this.http.post<Usuario>('http://localhost:3001/login', { nome, senha })
+    return this.http.post<Usuario>('https://apidavid-production.up.railway.app/', { nome, senha })
     .pipe(
       tap((user) => {
         sessionStorage.setItem("email" , user.email)
