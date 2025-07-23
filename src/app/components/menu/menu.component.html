@@ -1,0 +1,43 @@
+<link rel="stylesheet" href="./menu.component.html">
+<link href="https://fonts.cdnfonts.com/css/ford" rel="stylesheet">
+
+<nav class="modern-navbar">
+  <div class="navbar-content">
+    <button type="button" class="menu-toggle" data-bs-toggle="offcanvas" data-bs-target="#sideMenu">
+      <svg class="hambuguer" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+      </svg>
+      
+    </button>
+    
+  </div>
+</nav>
+
+<div class="offcanvas offcanvas-start modern-sidebar" tabindex="-1" id="sideMenu">
+  <div class="offcanvas-header">
+    <div class="sidebar-logo">
+      <img src="fordwhite.png" alt="Ford Logo" class="img-fluid" style="max-width: 150px;">
+    </div>
+    <button type="button" class="btn btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+  </div>
+  
+  <div class="offcanvas-body">
+    <nav class="sidebar-nav">
+      <button class="nav-item" (click)="goToHome()">
+        
+        <span class="nav-icon"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z"/></svg></span>
+        Home
+      </button>
+      
+      <button class="nav-item" (click)="goToDashboard()">
+        <span class="nav-icon"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="M640-160v-280h160v280H640Zm-240 0v-640h160v640H400Zm-240 0v-440h160v440H160Z"/></svg></span>
+        Dashboard
+      </button>
+      
+      <button class="nav-item danger" (click)="logout()">
+        <span class="nav-icon"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="M200-120q-33 0-56.5-23.5T120-200v-160h80v160h560v-560H200v160h-80v-160q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm220-160-56-58 102-102H120v-80h346L364-622l56-58 200 200-200 200Z"/></svg></span>
+        Logout
+      </button>
+    </nav>
+  </div>
+</div>

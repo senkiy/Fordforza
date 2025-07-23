@@ -1,0 +1,62 @@
+/* Tela escura ao fundo */
+.janela-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.janela-recuperar {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 2rem;
+  width: 100%;
+  max-width: 400px;
+  position: relative;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.btn-fechar {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #555;
+  cursor: pointer;
+}
+
+.btn-fechar:hover {
+  color: #000;
+}
+
+.input-email {
+  width: 100%;
+  padding: 0.6rem;
+  margin-top: 1rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.mensagem {
+  display: block;
+  margin-top: 0.8rem;
+  font-size: 0.9rem;
+}
+
+.erro {
+  color: #c0392b;
+}
+
+.sucesso {
+  color: #27ae60;
+}

@@ -1,0 +1,79 @@
+.modern-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  font-family: 'Ford', sans-serif;
+}
+
+.modern-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  font-family: 'Ford', sans-serif;
+}
+
+.modern-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+  font-family: 'Ford', sans-serif;
+}
+
+.card-icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.card-title {
+  font-size: 2rem;
+  color: #7f8c8d;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  font-family: 'Ford', sans-serif;
+}
+
+.card-value {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #2c3e50;
+  font-family: 'Ford', sans-serif;
+}
+
+/* Variações de cor */
+.card-primary::before {
+  background: linear-gradient(90deg, #3498db, #2980b9);
+}
+
+.card-success::before {
+  background: linear-gradient(90deg, #2ecc71, #27ae60);
+}
+
+.card-info::before {
+  background: linear-gradient(90deg, #17a2b8, #138496);
+}
+
+.card-warning::before {
+  background: linear-gradient(90deg, #f39c12, #e67e22);
+}
+
+.card-primary .card-icon {
+  color: #3498db;
+}
+
+.card-success .card-icon {
+  color: #2ecc71;
+}
+
+.card-info .card-icon {
+  color: #17a2b8;
+}
+
+.card-warning .card-icon {
+  color: #f39c12;
+}

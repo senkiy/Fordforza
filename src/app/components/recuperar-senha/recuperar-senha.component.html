@@ -1,0 +1,12 @@
+<div class="janela-overlay">
+  <div class="janela-recuperar">
+    <button class="btn-fechar" (click)="fecharJanela()">×</button>
+    
+    <h3>Recuperar Senha</h3>
+    
+    <input [formControl]="emailControl" placeholder="Digite seu e-mail" class="input-email" />
+    
+    <small *ngIf="emailValido === false" class="mensagem erro">E-mail não encontrado</small>
+    <small *ngIf="emailValido === true" class="mensagem sucesso">E-mail válido! Enviamos instruções.</small>
+  </div>
+</div>

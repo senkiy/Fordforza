@@ -1,0 +1,89 @@
+<link rel="stylesheet" href="./login-form.component.html">
+<link href="https://fonts.cdnfonts.com/css/ford" rel="stylesheet">
+
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="w-100">
+  <p class="h3 text-center mb-4">Painel de Acesso</p>
+
+  <div class="text-center mb-4">
+    <img src="/logo-ford.png" alt="Logo Ford" class="img-fluid logo">
+  </div>
+  
+  <div class="form-group mb-3">
+    <label for="nome" class="form-label">Login</label>
+    <input 
+      id="nome" 
+      type="text" 
+      formControlName="nome" 
+      class="form-control"
+      [class.is-invalid]="loginForm.get('nome')?.invalid && loginForm.get('nome')?.touched"
+      placeholder="Digite seu login"
+      autocomplete="username">
+    <div *ngIf="loginForm.get('nome')?.invalid && loginForm.get('nome')?.touched" class="invalid-feedback">
+      Login é obrigatório
+    </div>
+  </div>
+
+  <div class="form-group mb-3">
+    <label for="senha" class="form-label">Senha</label>
+    <div class="input-group">
+      <input 
+        id="senha" 
+        [type]="showPassword ? 'text' : 'password'" 
+        formControlName="senha" 
+        class="form-control"
+        [class.is-invalid]="loginForm.get('senha')?.invalid && loginForm.get('senha')?.touched"
+        placeholder="Digite sua senha"
+        autocomplete="current-password">
+      <button 
+        type="button" 
+        class="btn btn-outline-secondary" 
+        (click)="togglePasswordVisibility()"
+        aria-label="Mostrar/ocultar senha">
+          
+        <img 
+          [src]="showPassword ? 'eyeoff.png' : 'eyeon.png'" 
+          alt="Ícone de visibilidade"
+          width="24"
+          height="24">
+          
+      </button>
+    </div>
+    <div *ngIf="loginForm.get('senha')?.invalid && loginForm.get('senha')?.touched" class="invalid-feedback">
+      <div *ngIf="loginForm.get('senha')?.errors?.['required']">Senha é obrigatória</div>
+      <div *ngIf="loginForm.get('senha')?.errors?.['minlength']">Senha deve ter pelo menos 3 caracteres</div>
+    </div>
+  </div>
+
+  <div class="form-check mb-3">
+    <input 
+      class="form-check-input" 
+      type="checkbox" 
+      formControlName="rememberMe" 
+      id="rememberMe">
+    <label class="form-check-label" for="rememberMe">
+      Lembrar do meu usuário
+    </label>
+  </div>
+
+  <button 
+    type="submit" 
+    class="btn btn-primary w-100 mb-3"
+    [disabled]="loginForm.invalid || isLoading">
+    <span *ngIf="isLoading" class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+    {{ isLoading ? 'Entrando...' : 'Entrar' }}
+  </button>
+
+  <div class="text-center">
+  <button 
+    type="button" 
+    class="btn btn-link text-decoration-none small text-muted p-0" 
+    (click)="mostrarRecuperarSenha = true">
+    Esqueceu sua senha?
+  </button>
+</div>
+
+</form>
+
+<app-recuperar-senha 
+  *ngIf="mostrarRecuperarSenha" 
+  (fechar)="mostrarRecuperarSenha = false" />

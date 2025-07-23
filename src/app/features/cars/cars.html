@@ -1,0 +1,33 @@
+<div class="cars-page">
+  <div class="page-header">
+    <div class="filter-bar">
+  <input 
+    type="text" 
+    placeholder="Buscar por modelo..."
+    #searchInput
+    (input)="filterCars(searchInput.value)">
+</div>
+    <h2>LINEUP FORZA: FORD EDITION</h2>
+    <p>Veja a linha de veículos Ford que combinam performance excepcional com tecnologia de ponta.</p>
+  </div>
+
+  <div class="cars-grid">
+    @for (car of filteredCars; track car.id){
+      <div class="car-card">
+        <div class="card-image-container">
+          <img [src]="car.imageUrl" [alt]="'Imagem do ' + car.name">
+          <span class="top-speed-badge">{{ car.topSpeed }} km/h</span>
+        </div>
+        <div class="card-content">
+          <h3>{{ car.name }}</h3>
+          <p>{{ car.tagline }}</p>
+          <div class="specs">
+            <p><strong>Motor:</strong> {{ car.specs.engine }}</p>
+            <p><strong>Potência:</strong> {{ car.specs.power }}</p>
+            <p><strong>Aceleração:</strong> {{ car.specs.acceleration }}</p>
+          </div>
+        </div>
+      </div>
+    }
+  </div>
+</div>

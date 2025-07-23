@@ -1,0 +1,124 @@
+.modern-navbar {
+  background: black; 
+  padding: 0.8rem 1.5rem;
+  position: sticky;
+  top: 0;
+  font-family: 'Ford', sans-serif;
+}
+
+.hambuguer{
+  width: 200%;
+  height: 200%;
+}
+
+.navbar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin-left: -0.8%;
+  font-family: 'Ford', sans-serif;
+  margin-top: -0.3%;
+}
+
+.menu-toggle {
+    font-family: "acumin-pro-condensed", "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", -apple-system, sans-serif;
+  background-color: transparent;
+  color: white;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  font-size: large;
+}
+
+.menu-toggle:hover {
+  background: transparent;
+  transform: translateY(-2px);
+}
+
+.logout-btn {
+  background: #e74c3c;
+  border: none;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  font-family: 'Ford', sans-serif;
+}
+
+.logout-btn:hover {
+  background: #c0392b;
+  transform: translateY(-2px);
+  font-family: 'Ford', sans-serif;
+}
+
+.modern-sidebar {
+  background: black;
+  color: white;
+  font-family: 'Ford', sans-serif;
+}
+
+.sidebar-logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-family: 'Ford', sans-serif;
+}
+
+.sidebar-logo img {
+  height: 40px;
+  font-family: 'Ford', sans-serif;
+ 
+}
+
+.sidebar-logo span {
+  font-size: 1.2rem;
+  font-weight: 600;
+  font-family: 'Ford', sans-serif;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.nav-item {
+  background: transparent;
+  border: none;
+  color: white;
+  padding: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  text-align: left;
+}
+
+.nav-item:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+.nav-item.active {
+  background: rgba(52, 152, 219, 0.3);
+  border-left: 4px solid #3498db;
+}
+
+.nav-item.danger:hover {
+  background: rgba(231, 76, 60, 0.2);
+}
+
+.nav-icon {
+  font-size: 1.2rem;
+}

@@ -1,0 +1,89 @@
+.table-container {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+}
+
+.table-header {
+  background: linear-gradient(135deg, #34495e, #2c3e50);
+  color: white;
+  padding: 1.5rem;
+}
+
+.table-header h3 {
+  margin: 0;
+  font-weight: 600;
+}
+
+.table-content {
+  overflow-x: auto;
+}
+
+.modern-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.modern-table th {
+  background: #f8f9fa;
+  padding: 1rem;
+  font-weight: 600;
+  color: #2c3e50;
+  text-align: left;
+  border-bottom: 2px solid #ecf0f1;
+}
+
+.modern-table td {
+  padding: 1rem;
+  border-bottom: 1px solid #ecf0f1;
+}
+
+.modern-table tr:hover {
+  background: #f8f9fa;
+}
+
+.vin-code {
+  background: #ecf0f1;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.fuel-indicator {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.fuel-bar {
+  width: 100px;
+  height: 8px;
+  background: #ecf0f1;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.fuel-level {
+  height: 100%;
+  background: linear-gradient(90deg, #e74c3c, #f39c12, #2ecc71);
+  transition: width 0.3s ease;
+}
+
+.status-badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.status-badge.online {
+  background: rgba(46, 204, 113, 0.1);
+  color: #27ae60;
+}
+
+.status-badge.offline {
+  background: rgba(231, 76, 60, 0.1);
+  color: #e74c3c;
+}

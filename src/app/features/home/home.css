@@ -1,0 +1,167 @@
+html, body{
+    background-color: black;
+}
+
+.hero-section {
+    font-family: "acumin-pro-condensed", "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", -apple-system, sans-serif;
+  background-image: 
+    linear-gradient(rgb(0, 0, 0), rgba(54, 56, 63, 0.8)), 
+    url('../../../../public/assets/wallpaperbetter.com_1920x1080.jpg'); /* ATENÇÃO: Coloque sua imagem aqui */
+  background-size: cover;
+  background-position: center;
+  height: 109.6vh; /* Ocupa 90% da altura da tela */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start; /* Alinha o conteúdo à esquerda */
+  padding: 0 5rem; /* Espaçamento lateral */
+  text-align: left;
+  margin-top: -8%;
+}
+
+.main-title {
+  font-family: "acumin-pro-condensed", "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", -apple-system, sans-serif;
+  font-size: 4rem; /* 64px */
+  font-weight: bold;
+  color: #ffffff; /* Azul claro */
+}
+
+.subtitle {
+    font-family: "acumin-pro-condensed", "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", -apple-system, sans-serif;
+  font-size: 2rem; /* 32px */
+  color: #ffc107; /* Amarelo/Dourado */
+  margin-top: -1rem;
+}
+
+.description {
+    font-family: "acumin-pro-condensed", "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", -apple-system, sans-serif;
+  font-size: 1.25rem; /* 20px */
+  max-width: 500px; /* Limita a largura do texto */
+  margin-top: 1rem;
+  color: white;
+}
+
+.hero-actions {
+    font-family: "acumin-pro-condensed", "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", -apple-system, sans-serif;
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+}
+
+/* Estilos dos botões - ajuste as cores */
+.btn-secondary {
+  font-family: "acumin-pro-condensed", "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", -apple-system, sans-serif;
+  padding: 0.75rem 1.5rem;
+  border: 2px solid white;
+  background-color: transparent;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.btn-secondary:hover {
+    font-family: "acumin-pro-condensed", "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", -apple-system, sans-serif;
+  background-color: white;
+  color: black;
+}
+
+
+.stats-section {
+    font-family: "acumin-pro-condensed", "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", -apple-system, sans-serif;
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem;
+  margin-top: -10%;
+  background-color: black;
+}
+
+.stat-item {
+    font-family: "acumin-pro-condensed", "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", -apple-system, sans-serif;
+  text-align: center;
+}
+
+.stat-value {
+    font-family: "acumin-pro-condensed", "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", -apple-system, sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ffc107; /* Amarelo/Dourado */
+  display: block;
+}
+
+.stat-label {
+    font-family: "acumin-pro-condensed", "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", -apple-system, sans-serif;
+  font-size: 1.1rem;
+  color: #ffffff;
+}
+
+/* Responsividade para tablets (≤768px) */
+@media (max-width: 768px) {
+  .hero-section {
+    height: auto;
+    padding: 2rem;
+    align-items: center;
+    text-align: center;
+    margin-top: 0;
+  }
+
+  .main-title {
+    font-size: 3rem;
+  }
+
+  .subtitle {
+    font-size: 1.5rem;
+    margin-top: 0;
+  }
+
+  .description {
+    font-size: 1rem;
+    max-width: 90%;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .stats-section {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 0;
+  }
+
+  .stat-value {
+    font-size: 2rem;
+  }
+
+  .stat-label {
+    font-size: 1rem;
+  }
+}
+
+/* Responsividade para celulares (≤480px) */
+@media (max-width: 480px) {
+  .main-title {
+    font-size: 2.2rem;
+  }
+
+  .subtitle {
+    font-size: 1.2rem;
+  }
+
+  .description {
+    font-size: 0.95rem;
+  }
+
+  .btn-secondary {
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero-section {
+    padding: 1.5rem 1rem;
+  }
+}

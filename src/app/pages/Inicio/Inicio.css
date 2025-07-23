@@ -1,0 +1,85 @@
+/* Plano de fundo geral */
+body, .home-container {
+  background-image: 
+    linear-gradient(rgba(0, 0, 0), rgba(11, 15, 25, 0.8)), 
+    url('/assets/240-2409349_ford-raptor-full-hd.jpg'); /* Corrigido o caminho */
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  padding: 2rem;
+  font-family: 'Ford', sans-serif;
+  margin: 0%;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* Título destacado */
+.welcome-card span {
+  color: #0d6efd;
+}
+
+/* Container da imagem do carro */
+.car-image-container {
+  margin-top: 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* Imagem do carro responsiva */
+.car-img {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* Cartão de boas-vindas */
+.welcome-card {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 800px;
+  width: 90%;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  body, .home-container {
+    padding: 1.5rem;
+  }
+
+  .welcome-card {
+    padding: 1.5rem;
+  }
+
+  .car-img {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  body, .home-container {
+    padding: 1rem;
+  }
+
+  .welcome-card {
+    padding: 1rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+}
